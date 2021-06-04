@@ -32,7 +32,7 @@ public class GetDetailTask implements Runnable{
     @Override
     public void run() {
 
-        FileWriter fw = new FileWriter("D:\\apps\\java-develop\\oneonone\\common\\subjectDetail\\fornum\\subjectDetailRecruitment-xs" +index+".txt", true);
+        FileWriter fw = new FileWriter("D:\\apps\\java-develop\\oneonone\\common\\subjectDetail\\fornum_2021\\subjectDetailRecruitment-xs" +index+".txt", true);
         //开始爬虫
         if(index == 5) {
             end = detailForRecruitmentList.size();

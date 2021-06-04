@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class Crawler {
+public class BaseCrawler {
 
     private static PoolingHttpClientConnectionManager poolManager;
 
@@ -90,14 +90,14 @@ public class Crawler {
      * @return
      * @throws Exception
      */
-    public String serviceForPostWithForm() throws Exception {
+    public static String serviceForPostWithForm() throws Exception {
         String content = null;
         //创建 HttpClient
         CloseableHttpClient httpClient = HttpClients.createDefault();
-        HttpPost httpPost = new HttpPost("http://yun.itheima.com/search");
+        HttpPost httpPost = new HttpPost("https://yz.chsi.com.cn/zsml/code/zy.do");
         //创建 List 集合，封装表单参数
         List<NameValuePair> params = new ArrayList<>();
-        BasicNameValuePair pair = new BasicNameValuePair("keys", "Java");
+        BasicNameValuePair pair = new BasicNameValuePair("q", "0905");
         params.add(pair);
         //创建 表单 Entity对象，以表单方式提交
         UrlEncodedFormEntity formEntity = new UrlEncodedFormEntity(params, "utf-8");
@@ -158,7 +158,7 @@ public class Crawler {
     }
 
     public static void main(String[] args) throws Exception {
-        Crawler crawler = new Crawler();
-        System.out.println(crawler.serviceForPostWithForm());
+        BaseCrawler baseCrawler = new BaseCrawler();
+        System.out.println(baseCrawler.serviceForPostWithForm());
     }
 }

@@ -17,6 +17,10 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 测试代码
+ * 测试爬虫
+ */
 public class Test {
     public static final String POST_HEAD_FOR_SUBJECT_DETAIL = "https://yz.chsi.com.cn/zsml/querySchAction.do?";
     public List<DetailForRecruitment> detailForRecruitmentList;

@@ -71,8 +71,8 @@ public class JsoupBox {
     }
 
     public void getAllUniversityAndWriteToFile() throws Exception {
-        FileWriter fw = new FileWriter("D:\\apps\\java-develop\\oneonone\\universities.txt");
-        FileWriter efficientFW = new FileWriter("D:\\apps\\java-develop\\oneonone\\universities-ef.txt");
+        FileWriter fw = new FileWriter("D:\\dev\\projects\\doing\\server\\files\\universities.txt");
+        FileWriter efficientFW = new FileWriter("D:\\dev\\projects\\doing\\server\\files\\universities-ef.txt");
         for(int i=0;i<43;i++) {
             URL url = new URL("https://yz.chsi.com.cn/sch/?start=" + i * 20);
             String condition = "tbody tr";
@@ -103,15 +103,15 @@ public class JsoupBox {
             Element first = element.select("option[value]").first();
             stringBuilder.append(first.text()).append(" ");
         }
-        FileWriter fw = new FileWriter("D:\\apps\\java-develop\\oneonone\\alllocations.txt");
+        FileWriter fw = new FileWriter("D:\\dev\\projects\\doing\\server\\files\\alllocations.txt");
         fw.write(stringBuilder.toString());
         fw.flush();
         fw.close();
     }
 
     public void parseNameAndSchoolId() throws Exception {
-        FileReader fr = new FileReader("D:\\apps\\java-develop\\oneonone\\universities-ef.txt");
-        FileWriter fw = new FileWriter("D:\\apps\\java-develop\\oneonone\\university_name_schoolId.txt");
+        FileReader fr = new FileReader("D:\\dev\\projects\\doing\\server\\files\\universities-ef.txt");
+        FileWriter fw = new FileWriter("D:\\dev\\projects\\doing\\server\\files\\university_name_schoolId.txt");
         BufferedReader br = new BufferedReader(fr);
         String schoolUrl = "";
         while((schoolUrl = br.readLine()) != null) {

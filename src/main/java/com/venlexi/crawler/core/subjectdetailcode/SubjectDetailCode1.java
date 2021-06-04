@@ -114,7 +114,7 @@ public class SubjectDetailCode1 {
         FileReader frForSchoolName = new FileReader("D:\\apps\\java-develop\\oneonone\\university_name_schoolId.txt");
         BufferedReader brForSchoolName = new BufferedReader(frForSchoolName);
 
-        FileReader frForSubjectCode = new FileReader("D:\\apps\\java-develop\\oneonone\\common\\subjectDetail\\subjectDetailNameAndCodes-zs.txt");
+        FileReader frForSubjectCode = new FileReader("D:\\apps\\java-develop\\oneonone\\common\\subjectDetail\\subjectDetailNameAndCodes-xs.txt");
         BufferedReader brForSubjectCode = new BufferedReader(frForSubjectCode);
 
         FileWriter fw = new FileWriter("D:\\apps\\java-develop\\oneonone\\common\\subjectDetail\\fornum\\subjectDetailRecruitment-xs.txt");
@@ -385,6 +385,7 @@ public class SubjectDetailCode1 {
 
     public static void main(String[] args) throws Exception {
         SubjectDetailCode1 subjectDetailCode = new SubjectDetailCode1();
-            subjectDetailCode.getUniversityCode(6);
+            //subjectDetailCode.getUniversityCode(6);
+        subjectDetailCode.getAllDetails();
     }
 }
