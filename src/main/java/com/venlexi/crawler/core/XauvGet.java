@@ -11,6 +11,16 @@ import java.io.IOException;
 public class XauvGet {
     public static void main(String[] args) {
 
+        String s= "(12)撒大";
+
+
+        int codeEnd = s.indexOf(")");
+
+        String code = s.substring(1, codeEnd);
+        String name = s.substring(codeEnd+1, s.length());
+
+        String[] split = s.split("\\)");
+        System.out.println(s);
 
     }
 }

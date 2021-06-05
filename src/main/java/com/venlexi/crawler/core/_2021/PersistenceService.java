@@ -33,7 +33,7 @@ public class PersistenceService {
             String jsonString = JSON.toJSONString(object);
             pw.print(jsonString);
             if (i >= objects.size() - 1) {
-                break;
+                continue;
             }
             if (spiltLine) {
                 pw.println();

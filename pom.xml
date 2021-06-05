@@ -10,10 +10,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.venlexi</groupId>
-    <artifactId>crawler</artifactId>
+    <artifactId>subjectCrawler</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>crawler</name>
-    <description>crawler project for Spring Boot</description>
+    <name>subjectCrawler</name>
+    <description>subjectCrawler project for Spring Boot</description>
 
     <properties>
         <java.version>1.8</java.version>

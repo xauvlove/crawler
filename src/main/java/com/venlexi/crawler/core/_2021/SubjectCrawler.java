@@ -35,21 +35,19 @@ import java.util.stream.Collectors;
  * @Package com.venlexi.crawler.core._2021
  * @Desc
  */
-public class Crawler {
+public class SubjectCrawler extends CommonCrawler {
 
-    private static final String 请求学科地址 = "https://yz.chsi.com.cn/zsml/pages/getZy.jsp";
+    protected static final String 请求学科地址 = "https://yz.chsi.com.cn/zsml/pages/getZy.jsp";
 
-    private static final String 请求专业地址 = "https://yz.chsi.com.cn/zsml/code/zy.do";
-
-    private static final String basePath = "D:\\dev\\projects\\doing\\数据文件\\_2021\\";
+    protected static final String 请求专业地址 = "https://yz.chsi.com.cn/zsml/code/zy.do";
 
     private static final PersistenceService persistenceService = new PersistenceService();
 
     public static void main(String[] args) throws Exception {
-        Crawler crawler = new Crawler();
+        SubjectCrawler subjectCrawler = new SubjectCrawler();
 
-        crawler.getAndInjectSXSubjects(true);
-        crawler.getAndInjectZSSubjects(true);
+        subjectCrawler.getAndInjectSXSubjects(true);
+        subjectCrawler.getAndInjectZSSubjects(true);
 
     }
 
@@ -240,7 +238,7 @@ public class Crawler {
     /*------------------------------------------------ 模型 ------------------------------------------------*/
 
     @Data
-    private static class SXSecondarySubject {
+    public static class SXSecondarySubject {
 
         /**
          * 次级学科名称
@@ -259,7 +257,7 @@ public class Crawler {
     }
 
     @Data
-    private static class SXFirstSubject {
+    public static class SXFirstSubject {
 
         /**
          * 一级学科名称
@@ -278,7 +276,7 @@ public class Crawler {
     }
 
     @Data
-    private static class ZSFirstSubject {
+    public static class ZSFirstSubject {
 
         /**
          * 专硕
@@ -297,7 +295,7 @@ public class Crawler {
     }
 
     @Data
-    private static class ZSSecondarySubject {
+    public static class ZSSecondarySubject {
 
         /**
          * 次级学科名称
@@ -316,7 +314,7 @@ public class Crawler {
     }
 
     @Data
-    private static class City {
+    public static class City {
 
         /**
          * 城市/省份名称
@@ -330,7 +328,7 @@ public class Crawler {
     }
 
     @Data
-    private static class CommonModel {
+    public static class CommonModel {
 
         /**
          * 名称
